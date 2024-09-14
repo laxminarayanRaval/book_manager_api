@@ -3,10 +3,10 @@ const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 const bookRoutes = require("./routes/bookRoutes");
 const authRoutes = require("./routes/authRoutes");
-const { errorHandler } = require("./middlewares/errorMiddleware");
+const generateFakeData = require("./utils/generateFakeData");
 const swaggerUi = require("swagger-ui-express");
 const swaggerDocument = require("./swagger.json");
-const generateFakeData = require("./utils/generateFakeData");
+const { errorHandler } = require("./middlewares/errorMiddleware");
 const logger = require("./utils/logger");
 
 dotenv.config();
